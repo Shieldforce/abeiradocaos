@@ -11,12 +11,43 @@ services:
       - .docker/apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
       - .:/var/www/html
     ports:
-      - 8099:80
-      - 4439:443
+      - 8991:80
+      - 4431:443
     restart: always
     networks:
-      - network-app
+      - mynetwork
+
+  mysql:
+    image: mysql:5.7.26
+    container_name: "mysql-srv"
+    volumes:
+      - .docker/db:/var/lib/mysql
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    networks:
+      - mynetwork
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: "phpmyadmin-srv"
+    ports:
+      - 8992:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    links:
+      - mysql
+    restart: always
+    networks:
+      - mynetwork
 
 networks:
-  network-app:
+  mynetwork:
     driver: bridge

@@ -8,5 +8,14 @@
 
 ### Estruta de Projeto
 
- - Seguremos com a estrutra padrão MVC
+ - Seguiremos com a estrutra padrão MVC
+ - Docker >= 20.10.17
+ - Docker Compose >= 1.29.2
 
+### Startando o projeto (Comando bash/terminal)
+```
+bash start.sh
+```
+ - Abrir projeto : http://0.0.0.0:8991
+ - Abrir PhpMyAdmin : http://0.0.0.0:8991
+ - Conexão Mysql : 0.0.0.0:3307
