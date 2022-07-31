@@ -1,0 +1,24 @@
+{
+    "license": "MIT",
+    "authors" : [
+        {
+            "name" : "Alexandre Ferreira",
+            "email" : "shieldforce2@gmail.com",
+            "homepage" : "https://abeiradocaos.com.br",
+            "role" : "Developer"
+        }
+    ],
+    "require" : {
+        "php" : ">=7.4",
+        "ext-mbstring": "*",
+        "ext-xml" : "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "App\\" : ["app/", "core/", "helpers/"]
+        },
+        "files": [
+            "helpers/functions.php"
+        ]
+    }
+}
