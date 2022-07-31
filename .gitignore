@@ -3,3 +3,6 @@
 .vscode
 .env
 .docker/db/auto.cnf
+.docker/db/ib_logfile0
+.docker/db/ibdata1
+.docker/db/ibtmp1
