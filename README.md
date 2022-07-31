@@ -6,3 +6,7 @@
 
 ### Basear-se em pequenas atividades ou estudos. Visto que "de grão em grão, a galinha enche o papo".
 
+### Estruta de Projeto
+
+ - Seguremos com a estrutra padrão MVC
+
