@@ -2,4 +2,6 @@
 .idea
 .vscode
 .env
+.docker/db/*
 .docker/db
+.docker/db/
