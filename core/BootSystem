@@ -1,0 +1,10 @@
+<?php 
+
+namespace App;
+
+class BootSystem {
+    public static function execute()
+    {
+        return true;
+    }
+}
